@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br>
+      <h1 class="display-6"><i class="fas fa-comments-dollar text-success"></i> Transferência</h1>
+      <hr>
+      <form [formGroup]="formValue"(ngSubmit)="transferencia()">
+        <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label class="form-label">Agência de destino:</label >
+            <input formValuetype="text" class="form-control" placeholder="Digite aqui." formControlName="agenciaDestino">
+          </div>
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label class="form-label">Agência de origem:</label>
+            <input formValuetype="text" class="form-control" placeholder="Digite aqui." formControlName="agenciaOrigem">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label class="form-label">Conta de destino:</label>
+            <input formValuetype="text" class="form-control" placeholder="Digite aqui." formControlName="numeroContaDestino">
+          </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+            <label class="form-label">Conta de origem:</label>
+            <input formValuetype="text" class="form-control" placeholder="Digite aqui." formControlName="numeroContaOrigem">
+          </div>
+          </div>
+        </div>
+        <div class="valor">
+          <label class="form-label">Valor <i class="fas fa-coins"></i></label>
+          <input formValuetype="number" class="form-control" placeholder="Digite aqui." formControlName="valor">
+        </div>
+        <br>
+        <a routerLink='/contas' class="btn btn-dark"><i class="fas fa-chevron-circle-left"></i> Voltar</a>
+        <button type="submit" class="btn btn-success mx-1" [disabled]="!formValue.valid">Transferir</button>
+      </form>
+    </div>
+  </div>
+</div>

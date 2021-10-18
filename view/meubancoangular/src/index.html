@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Meubancoangular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="gradient">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br> <br>
+        <div class="text-block">
+        <h3>TREINAMENTO JAVA ANGULAR -   <img src="https://www.indracompany.com/sites/default/files/d7/Nueva_Marca/kit_de_prensa/Imagenes_multimedia/logotipo_indra_version_secundaria.jpg" class="img-thumbnail" alt="" width="70"> </h3>
+        </div>
+        <!--------- INICIO NAVBAR ----------->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="http://localhost:4200/index"><i class="fas fa-university"></i> Banco Angular</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown2" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="btn-group">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Cliente
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="http://localhost:4200/clientes">Lista de Clientes</a></li>
+                  <li><a class="dropdown-item" href="http://localhost:4200/clientes/cadastrar">Cadastrar Clientes</a></li>
+                </ul>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Conta
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="http://localhost:4200/contas">Lista de Contas</a></li>
+                  <li><a class="dropdown-item" href="http://localhost:4200/contas/cadastrar">Cadastrar Conta</a></li>
+                </ul>
+              </div>
+              <div class="saque">
+                <a class="btn btn-success" href="http://localhost:4200/caixa-eletronico/saque"> <i class="fas fa-coins"></i> - Saque</a>
+              </div>
+              <div class="deposito">
+                <a class="btn btn-success" href="http://localhost:4200/caixa-eletronico/deposito"> <i class="fas fa-coins"></i> + Depósito</a>
+              </div>
+              <div class="transferencia">
+                <a class="btn btn-success" href="http://localhost:4200/caixa-eletronico/transferencia"> <i class="fas fa-comments-dollar"></i> Transferência</a>
+              </div>
+              <div class="extrato">
+                <a class="btn btn-primary" href="http://localhost:4200/caixa-eletronico/extrato"> <i class="fas fa-file-medical-alt"></i> Extrato</a>
+              </div>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <app-root></app-root>
+</body>
+<br> <br> <br> <br> <br> <br>
+<footer class="fixar-rodape">
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/wagner_azvdo/" target="_blank" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/wagner-azevedo-5b849216a/" target="_blank" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/wagnerazvdo" target="_blank" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(107, 106, 106, 0.171);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://github.com/wagnerazvdo" target="_blank" >Wagner Azevedo</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>

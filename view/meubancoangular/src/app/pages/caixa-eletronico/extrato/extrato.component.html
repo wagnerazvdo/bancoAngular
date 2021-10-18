@@ -1,0 +1,47 @@
+<div class="container">
+  <form class="form-inline my-2 my-lg-0">
+    <div class="row">
+      <div class="col-4">
+        <br> <br>
+        <!--------------------------------------------------- SEÇÃO DE IMPUT DE PESQUISA --------------------------------------------------------------->
+        <input class="form-control mr-sm-2" type="search" [(ngModel)]="agencia" [ngModelOptions]="{standalone: true}" placeholder="Digite a agencia">
+      </div>
+      <div class="col-4">
+        <br> <br>
+        <input class="form-control mr-sm-2" type="search" [(ngModel)]="conta" [ngModelOptions]="{standalone: true}" placeholder="Digite a conta">
+      </div>
+      <div class="col-4">
+        <br> <br>
+        <button class="btn btn-primary mx-1" (click) = "buscarExtrato()" type="submit"><i class="fas fa-search"></i> Buscar</button>
+      </div>
+       <!------------------------------------------------------ FIM DA SEÇÃO DE IMPUT DE PESQUISA --------------------------------------------------->
+    </div>
+    </form>
+      <br>
+      <div class="row">
+      <div class="col">
+        <h4 class="display-6"> <i class="fas fa-clipboard text-info"></i> Extrato bancário</h4>
+        <hr>
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col"><i class="fas fa-stopwatch"></i> Data | hora</th>
+              <th scope="col">Tipo da Operaçao</th>
+              <th scope="col"><i class="far fa-comment-alt"></i> Observação</th>
+              <th scope="col"><i class="fas fa-coins"></i> Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let extrato of extrato">
+              <th>{{extrato.id}}</th>
+              <td>{{extrato.dataHora  | date:'d/M/yy | h:mm a' }}</td>
+              <td>{{extrato.tpOperacao}}</td>
+              <td>{{extrato.observacao}}</td>
+              <td>{{extrato.valor | currency: 'BRL'}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br>
+      <h1 class="display-6"> <i class="fas fa-user-check text-success"></i> {{ formValue.get('id')?.value ? 'Edição' : 'Cadastro' }} de Clientes</h1>
+      <hr>
+      <form [formGroup]="formValue" (ngSubmit)="enviar()">
+        <div class="cpf">
+          <label class="form-label">CPF</label>
+          <input type="text" class="form-control" id="exampleInputCpf" formControlName="cpf" placeholder="Digite seu CPF.">
+        </div>
+        <br>
+        <div class="email">
+          <label class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" placeholder="Digite seu e-mail.">
+        </div>
+        <br>
+        <div class="nome">
+          <label class="form-label">Nome</label>
+          <input type="text" class="form-control" id="exampleInputNome" formControlName="nome" placeholder="Digite seu nome.">
+        </div>
+        <br>
+        <div class="observacoes">
+          <label class="form-label">Observações</label>
+          <textarea class="form-control" cols="25" rows="4" formControlName="observacoes" placeholder="Escreva uma observação."></textarea>
+        </div>
+        <br>
+        <div *ngIf="formValue.get('id')?.value" class="mb-3">
+          <label class="form-label mx-1">Ativo</label>
+          <input type="checkbox" formControlName="ativo">
+        </div>
+        <a routerLink='/clientes' class="btn btn-dark"> <i class="fas fa-chevron-circle-left"></i> Voltar</a>
+        <button [disabled]="!formValue.valid"  type="submit" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Cadastrar</button>
+      </form>
+
+
+    </div>
+  </div>
+</div>
